@@ -6,12 +6,10 @@ const getUser = async (req, res) => {
     const user = await User.findById(id);
 
     if (!user) {
-      res.status(400).json({ message: 'User not found!' });
+      return res.status(400).json({ message: 'User not found!' });
     }
 
-    if (response.ok) {
-      res.status(200).json(user);
-    }
+    res.status(200).json(user);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
