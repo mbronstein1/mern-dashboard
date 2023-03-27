@@ -1,7 +1,7 @@
 const { Product } = require('../models');
 const { ProductStat } = require('../models');
 
-export const getProducts = async (req, res) => {
+exports.getProducts = async (req, res) => {
   try {
     const products = await Product.find();
 
