@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme } from '@mui/material';
+import { Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme } from '@mui/material';
 import {
   SettingsOutlined,
   ChevronLeft,
@@ -166,7 +166,9 @@ const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, us
                   {user.occupation}
                 </Typography>
               </Box>
-              <SettingsOutlined sx={{ color: theme.palette.secondary[300], fontSize: '25px' }} />
+              <Button onClick={() => console.log('open settings')} sx={{ overflow: 'hidden', p: '0', m: '0', minWidth: '0' }}>
+                <SettingsOutlined sx={{ color: theme.palette.secondary[300], fontSize: '25px' }} />
+              </Button>
             </FlexBetween>
           </Box>
         </Drawer>
